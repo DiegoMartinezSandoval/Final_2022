@@ -38,6 +38,49 @@ This statistical final is CAT~CAT since both values are categorical. Whether the
 
 ## Males
 
+### Null & Alterantive Hypothesis, & Methods (Question #1)
+
+$H_0$: There is no correlation between males & the vaccine. The vaccine doesn't work on males: you have the same likelihood of contracting covid-19 if you do or do not take the vaccine (if you are a male).
+
+$H_A$: There is a correlation between males & the vaccine. The drug is either beneficial or disadvantageous in preventing males from contracting covid-19. You don't have the same likelihood if you do or do not take the vaccine of contracting the disease.
+
+I'll use a bar chart for graphical descriptive results. I'll use a numerical data table for numerical descriptive results. I'll use a chi-squared test & a fisher exact test for inferential results. Than lastly, conclude if I fail to reject or reject the null hypothesis. 
+
+### Graphical Descriptive Results
+
+```{r}
+barchartGC(~infected + treatment, data = Males)
+barchartGC(~infected + treatment, data = Males, type = "percent")
+```
+
+The vaccine appears to make males less susceptible to covid-19. Since in the first bar chart (in frequency), you can visibly tell that males who do take the vaccine contract covid-19 less often. My second bar chart (in percentage), only furthers proves my claim. Since the bar chart value (for infected) decreases in the covid-19 department when males do take the vaccine by about 40% (if the placebo infected rate is at 70% & if the vaccine infected rate is at 30%). Males so far, have a positive result when they take the vaccine. 
+
+### Numerical Descriptive Results
+
+```{r}
+table1 <- xtabs(~infected + treatment, data = Males)
+rowPerc(table1)
+colPerc(table1)
+```
+
+My (row percentages) data table states that my initial estimate for the decreased likelihood of males to contract covid-19 with the vaccine being 40% is valid. Since the data table shows that only 32% of the infected population is vaccinated. Thus, when I subtract the two percentages, the placebo percentage is higher by 35.56%. Quite close to my estimate of 40%.  My (column percentages) data table shows that only 1.28% of males (who are vaccinated) have contracted covid-19. Thus, 1.35% less of the vaccinated male population are infected with covid-19 compared to those who aren't vaccinated. Since when I subtract the two percentages, the placebo percentage is higher by 1.35%. Males, so far, continuously show to have a positive result when they take the vaccine. 
+
+### Inferential Descriptive Results 
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+
+The null hypothesis has to be rejected since the chi-squared test states that the p-value is 0.00000000004812. This number is way below than the .05 mark. The chi-squared testGC also rejects the null hypothesis. It has a chi-squared statistic of 43.25 with a degrees of freedom of 1.  We reject the null hypothesis since it states that the p-value is 0. Also way below .05. The fisher exact test states that the p-value is 0.00000000002645. The fisher exact test also states that the odds ratio is 2.09 to 1. Our alternative hypothesis states that the odds ratio is not equal to 1. Since all 3 p-values are below .05 & the odds ratio contradicts the null hypothesis, I can safely reject the null hypothesis. There is a difference, it being a beneficial one for males. 
+
+### Male Discussion & Conclusion
+
+The original question is if the vaccine is either beneficial, disadvantageous, or neutral on preventing males from contracting covid-19. I can conclude that there is a difference. I can reject the null hypothesis. Since all 3 p-values were below .05 & since the odds ratio contradicts the null hypothesis. Now than, the vaccine positively effects males. When males take the vaccine, their odds of contracting covid-19 decrease. Thus, I do recommend that males do take the vaccine since it helps decrease their risks of contracting the deadly disease. 
+
+
+
 
 ## Females
 
