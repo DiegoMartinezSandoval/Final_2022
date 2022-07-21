@@ -1,6 +1,6 @@
 ---
 title: "Covid91 vaccine study Final2022"
-author: "Put your name here!"
+author: "Diego Martinez"
 output: 
   html_document:
     number_sections: true
@@ -18,11 +18,23 @@ FinalDat <-read.csv(file="final_Data.csv",header=TRUE)
 FinalData <- FinalDat  %>% select(-one_of("X"))
 FinalData <- FinalData %>%
 mutate(across(where(is.character), as.factor))
+Males = filter(FinalData, sex == "M")
+Females = filter(FinalData, sex == "F")
+LGBTQ  = filter(FinalData, LGBTQ == "LGBTQ")
+DrugUser = filter(FinalData, DrugUser == "DrugUser")
 ```
 
 # Introduction
 
 A new  preventative vaccine (covid91) is under test in clinical trials. Given the nature of this vaccine it is suspected that the drug may exhibit different effectiveness across the variety of subpopulations tracked. Consider population subgroups by gender( guys and gals), drug use, and sexual orientation. Write a complete report that separately considers this drug for each subgroup and your recommendations as to whether people in the subgroup should take the vaccine. Structure your report in four sections each devoted to one of the four subgroups, use null and alternative hypothesis statements and correct statistical verbage when referencing p-values in conclusions.
+
+## General Null Hypothesis & Alternative Hypothesis, & Methods
+
+$H_0$: There is no difference between how effective the vaccine is for whichever sub-group uses it. These two values are independent
+
+$H_A$: There is a difference between how effective the vaccine is for whichever sub-group uses it. These two values are dependent. 
+
+This statistical final is CAT~CAT since both values are categorical. Whether the vaccine is effective (or not) can be categorized and so can the sub-groups. Thus, I will be using the following strategies: A bar chart (graphical descriptive results), a data table (numerical descriptive results), a chi-squared test (inferential results), and a fisher exact test (inferential descriptive results) for all 4 of the sub-groups. After I've done this for all 4 sub-groups, I will separately consider the vaccine for each sub-group & give my recommendation (based off of the statistics) whether or not each sub-group should take the vaccine. This final will be broken down into 4 questions, 4 null & alternative hypothesis, 4 brief conclusions, & 1 final (very descriptive) conclusion. This general null hypothesis & alternative hypothesis will not be answered. This is to better organize my study. My next 4 null & alternative hypothesis's will be answered as required. 
 
 ## Males
 
