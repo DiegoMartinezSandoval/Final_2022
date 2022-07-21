@@ -26,7 +26,7 @@ DrugUser = filter(FinalData, DrugUser == "yes")
 
 # Introduction
 
-A new  preventative vaccine (covid91) is under test in clinical trials. Given the nature of this vaccine it is suspected that the drug may exhibit different effectiveness across the variety of subpopulations tracked. Consider population subgroups by gender( guys and gals), drug use, and sexual orientation. Write a complete report that separately considers this drug for each subgroup and your recommendations as to whether people in the subgroup should take the vaccine. Structure your report in four sections each devoted to one of the four subgroups, use null and alternative hypothesis statements and correct statistical verbage when referencing p-values in conclusions.
+A new  preventative vaccine (covid91) is under test in clinical trials. Given the nature of this vaccine it is suspected that the drug may exhibit different effectiveness across the variety of sub-populations tracked. Consider population subgroups by gender( guys and gals), drug use, and sexual orientation. Write a complete report that separately considers this drug for each subgroup and your recommendations as to whether people in the subgroup should take the vaccine. Structure your report in four sections each devoted to one of the four subgroups, use null and alternative hypothesis statements and correct statistical verbage when referencing p-values in conclusions.
 
 ## General Null Hypothesis & Alternative Hypothesis, & Methods
 
@@ -38,13 +38,13 @@ This statistical final is CAT~CAT since both values are categorical. Whether the
 
 ## Males
 
-### Null & Alterantive Hypothesis, & Methods (Question #1)
+### Null & Alternative Hypothesis, & Methods (Question #1)
 
 $H_0$: There is no correlation between males & the vaccine. The vaccine doesn't work on males: you have the same likelihood of contracting covid-19 if you do or do not take the vaccine (if you are a male).
 
 $H_A$: There is a correlation between males & the vaccine. The drug is either beneficial or disadvantageous in preventing males from contracting covid-19. You don't have the same likelihood (if you do or do not take the vaccine) of contracting the disease.
 
-I'll use a bar chart for graphical descriptive results. I'll use a numerical data table for numerical descriptive results. I'll use a chi-squared test & a fisher exact test for inferential results. Than lastly, conclude if I fail to reject or reject the null hypothesis. 
+I'll use a bar chart for graphical descriptive results. I'll use a numerical data table for numerical descriptive results. I'll use a chi-squared test & a fisher exact test for inferential results. Than lastly, conclude if I fail to reject or reject the null hypothesis & give my recommendation towards if males should take the vaccine.
 
 ### Graphical Descriptive Results
 
@@ -88,7 +88,7 @@ $H_0$: There is no correlation between females & the vaccine. The vaccine doesn'
 
 $H_A$: There is a correlation between females & the vaccine. The drug is either beneficial or disadvantageous in preventing females from contracting covid-19. You don't have the same likelihood (if you do or do not take the vaccine) of contracting the disease.
 
-I'll use a bar chart for graphical descriptive results. I'll use a numerical data table for numerical descriptive results. I'll use a chi-squared test & a fisher exact test for inferential results. Than lastly, conclude if I fail to reject or reject the null hypothesis. 
+I'll use a bar chart for graphical descriptive results. I'll use a numerical data table for numerical descriptive results. I'll use a chi-squared test & a fisher exact test for inferential results. Than lastly, conclude if I fail to reject or reject the null hypothesis & give my recommendation towards if females should take the vaccine.
 
 ### Graphical Descriptive Results
 
@@ -108,7 +108,7 @@ rowPerc(table2)
 colPerc(table2)
 ```
 
-My (row percentages) data table shows that my initial estiamte for the decreased likelihood of females to contract covid-19 with the vaccine being 20% is valid. Since the data table shows that only 41% of the infected population is vaccinated. Thus, when I subtract the two percentages, the placebo percentage is higher by 17.78%. Quite close to my estimate of 20%. My (column percentages) data table shows that only 1.62% of females (who are vaccinated) have contracted covid-19. Thus, .68% less of the vaccinated female population is infected with covid-19 compared to those who aren't vaccinated. Since when I subtract the two percentages, the placebo percentage is higher by .68%. Females, so far, continuously show to have a positive result when they take the vaccine. 
+My (row percentages) data table shows that my initial estimate for the decreased likelihood of females to contract covid-19 with the vaccine being 20% is valid. Since the data table shows that only 41% of the infected population is vaccinated. Thus, when I subtract the two percentages, the placebo percentage is higher by 17.78%. Quite close to my estimate of 20%. My (column percentages) data table shows that only 1.62% of females (who are vaccinated) have contracted covid-19. Thus, .68% less of the vaccinated female population is infected with covid-19 compared to those who aren't vaccinated. Since when I subtract the two percentages, the placebo percentage is higher by .68%. Females, so far, continuously show to have a positive result when they take the vaccine. 
 
 
 ### Inferetial Descriptive Results 
@@ -119,7 +119,7 @@ chisqtestGC(table2)
 fisher.test(table2)
 ```
 
-The null hypothesis has to be rejected since the chi-squared test states that the p-value is .0011. This number is way lower than the .05 mark. The chi-squared testGC also rejects the null hypothesis. It has a chi-squared of 10.65 with a degrees of freedom of 1. We reject the null hypothesis since it states that the p-value is .0011. Also way below .05. The fisher exact test states that the p-value is 0.0009484. The fisher exact test also states that the odds ratio is 1.43 to 1. Our alterantive hypothesis states that the odds ratio is not equal to 1. Since all 3 p-value are below .05 & the odds ratio contradicts the null hypothesis, I can safely reject the null hypothesis. There is a difference, it being a beneficial one for females. 
+The null hypothesis has to be rejected since the chi-squared test states that the p-value is .0011. This number is way lower than the .05 mark. The chi-squared testGC also rejects the null hypothesis. It has a chi-squared statistic of 10.65 with a degrees of freedom of 1. We reject the null hypothesis since it states that the p-value is .0011. Also way below .05. The fisher exact test states that the p-value is 0.0009484. The fisher exact test also states that the odds ratio is 1.43 to 1. Our alterantive hypothesis states that the odds ratio is not equal to 1. Since all 3 p-value are below .05 & the odds ratio contradicts the null hypothesis, I can safely reject the null hypothesis. There is a difference, it being a beneficial one for females. 
 
 ### Females Discussion & Conclusion
 
@@ -135,7 +135,7 @@ $H_0$: There is no correlation between LGBTQ+ members & the vaccine. The vaccine
 
 $H_A$: There is a correlation between LGBTQ+ members & the vaccine. The drug is either beneficial or disadvantageous in preventing LGBTQ+ members from contracting covid-19. You don't have the same likelihood (if you do or do not take the vaccine) of contracting the disease.
 
-I'll use a bar chart for graphical descriptive results. I'll use a numerical data table for numerical descriptive results. I'll use a chi-squared test & a fisher exact test for inferential results. Than lastly, conclude if I fail to reject or reject the null hypothesis.
+I'll use a bar chart for graphical descriptive results. I'll use a numerical data table for numerical descriptive results. I'll use a chi-squared test & a fisher exact test for inferential results. Than lastly, conclude if I fail to reject or reject the null hypothesis & give my recommendation towards if LGBTQ+ members should take the vaccine.
 
 ### Graphical Descriptive Results 
 
@@ -169,10 +169,50 @@ The null hypothesis has to be rejected since the chi-squared statistic states th
 
 ### LGBTQ+ Discussion & Conclusion
 
-The original question is if the vaccine is either beneficial, disadvantageous, or neutral in preventing LGBTQ+ members from contracting covid-19. I can conclude that there IS a difference. I can REJECT the null hypothesis. Since all 3 p-values were below .05 & since the odds ratio contradicts the null hypothesis. Now than, the vaccine NEGATIVELY effects LGBTQ+ members. When LGBTQ+ members take the vaccine, their odds of contracting covid-19 INCREASES. Thus, I DON'T recommend that LGBTQ+ members take the vaccine since it doesn't help decrease their odds of contracting the deadly disease but instead, increase the odds of contracting it. 
+The original question is if the vaccine is either beneficial, disadvantageous, or neutral in preventing LGBTQ+ members from contracting covid-19. I can conclude that there IS a difference. I can REJECT the null hypothesis. Since all 3 p-values were below .05 & since the odds ratio contradicts the null hypothesis. Now than, the vaccine NEGATIVELY effects LGBTQ+ members. When LGBTQ+ members take the vaccine, their odds of contracting covid-19 INCREASES. Thus, I DON'T recommend that LGBTQ+ members take the vaccine since it doesn't help decrease their odds of contracting the deadly disease but instead, increase their odds of contracting it. 
 
 
 ## Drug Users
 
 
+### Null Hypothesis & Alternative Hypothesis, & Methods (Question #4)
 
+$H_0$: There is no correlation between drug users & the vaccine. The vaccine doesn't work on drug users: you have the same likelihood of contracting covid-19 if you do or do not take the vaccine (if you are a drug user).
+
+$H_A$: There is a correlation between drug users & the vaccine. The drug is either beneficial or disadvantageous in preventing drug users from contracting covid-19. You don't have the same likelihood (if you do or do not take the vaccine) of contracting the disease.
+
+I'll use a bar chart for graphical descriptive results. I'll use a numerical data table for numerical descriptive results. I'll use a chi-squared test & a fisher exact test for inferential results. Than lastly, conclude if I fail to reject or reject the null hypothesis & give my recommendation towards if drug users should take the vaccine.
+
+### Graphical Descriptive Results
+
+```{r}
+barchartGC(~infected + treatment, data = DrugUser)
+barchartGC(~infected + treatment, data = DrugUser, type= "percent")
+```
+
+The vaccine appears to make drug users more susceptible to covid-19. Since in the first bar chart (in frequency), you can visibly tell that drug users who do take the vaccine contract covid-19 more often. My second bar chart (in percentage), only furthers proves my claim. Since the bar chart value (for infected) increases in the covid-19 department when drug users do take the vaccine by about 70% (if the placebo infected rate is at 15% & if the vaccine infected rate is at 85%). Drug users so far, have a disadvantageous result when they take the vaccine. 
+
+
+### Numerical Descriptive Results 
+
+```{r}
+table4 <- xtabs(~infected + treatment, data = DrugUser)
+rowPerc(table4)
+colPerc(table4)
+```
+
+My (row percentages) data table shows that my initial estimate for the increased likelihood of drug users to contract covid-19 with the vaccine being 70% is valid. Since the data table shows that 85% of the infected population is vaccinated. Thus, when I subtract the two percentages, the vaccine percentage is higher by 70%. This is equal to my estimate of 70%. My (column percentages) data table shows that 3.28% of drug users (who are vaccinated) have contracted covid-19. Thus, 2.68% more of the vaccinated drug user population is infected with covid-19 compared to those who aren't vaccinated. Since when I subtract the two percentages, the vaccine percentage is higher by 2.68%. Drug users, so far, continuously show to have a disadvantageous result when they take the vaccine. 
+
+### Inferential Descriptive Results 
+
+```{r}
+chisq.test(table4)
+chisqtestGC(table4)
+fisher.test(table4)
+```
+
+The null hypothesis has to be rejected since the chi-squared statistic states that the p-value is 0.0000001803 . This number is way below than the .05 mark. The chi-squared testGC also rejects the null hypothesis. It has a chi-squared statistic of 27.23 with a degrees of freedom of 1. I reject the null hypothesis since it states that the p-value is 0. Also way below .05. The fisher exact test states that the p-value is 0.00000002886.  The fisher exact test also states that the odds ratio is 0.18 to 1. My alternative hypothesis states that the odds ratio is not equal to 1. Since all 3 p-values are below .05 & the odds ratio contradicts the null hypothesis. I can safely reject the null hypothesis. There is a difference, it being a disadvantageous one for drug users. 
+
+### Drug Users Discussion & Conclusion 
+
+The original question is if the vaccine is either beneficial, disadvantageous, or neutral in preventing drug users from contracting covid-19. I can conclude that there IS a difference. I can REJECT the null hypothesis. Since all 3 p-values were below .05 & since the odds ratio contradicts the null hypothesis. Now than, the vaccine NEGATIVELY effects drug users. When drug users take the vaccine, their odds of contracting covid-19 INCREASES. Thus, I DON'T recommend that drug users take the vaccine since it doesn't help decrease their odds of contracting the deadly disease but instead, increase their odds of contracting it. 
